@@ -1,0 +1,65 @@
+?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.calendar.app.controllers.CalendarController" prefWidth="1200" prefHeight="800">
+    
+    <top>
+        <HBox style="-fx-background-color: #2c3e50; -fx-padding: 15;" alignment="CENTER">
+            <Label text="📅 Calendar View" style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+    
+    <center>
+        <VBox spacing="20" padding="20">
+            <!-- Calendar Controls -->
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="◀ Previous" onAction="#handlePreviousMonth"/>
+                <Label fx:id="monthYearLabel" text="Month Year" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-min-width: 200; -fx-alignment: center;"/>
+                <Button text="Today" onAction="#handleToday"/>
+                <Button text="Next ▶" onAction="#handleNextMonth"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="+ Add Event" onAction="#handleAddEvent" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold;"/>
+            </HBox>
+            
+            <HBox spacing="20" VBox.vgrow="ALWAYS">
+                <!-- Calendar Grid -->
+                <VBox spacing="10" HBox.hgrow="ALWAYS">
+                    <Label text="Monthly Calendar" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                    <GridPane fx:id="calendarGrid" hgap="1" vgap="1" style="-fx-border-color: #ddd; -fx-border-width: 1; -fx-padding: 5;"/>
+                </VBox>
+                
+                <!-- Events List -->
+                <VBox spacing="10" prefWidth="300">
+                    <Label text="Events This Month" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                    <ListView fx:id="eventsListView" style="-fx-border-color: #ddd; -fx-border-width: 1; -fx-min-height: 400;">
+                        <cellFactory>
+                            <fx:factory method="call">
+                                <ListCellFactory>
+                                    <ListCell>
+                                        <graphic>
+                                            <VBox spacing="5" style="-fx-padding: 10;">
+                                                <Label text="\${item.title}" style="-fx-font-weight: bold;"/>
+                                                <Label text="\${item.description}" style="-fx-font-size: 12px; -fx-text-fill: #666;"/>
+                                                <Label text="📍 \${item.location}" style="-fx-font-size: 11px; -fx-text-fill: #3498db;"/>
+                                            </VBox>
+                                        </graphic>
+                                    </ListCell>
+                                </ListCellFactory>
+                            </fx:factory>
+                        </cellFactory>
+                    </ListView>
+                    <Button text="View All Events" style="-fx-background-color: #3498db; -fx-text-fill: white;"/>
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+    
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-background-color: #f5f5f5; -fx-padding: 10;">
+            <Button text="Back to Dashboard" onAction="#handleBackToDashboard"/>
+        </HBox>
+    </bottom>
+</BorderPane>

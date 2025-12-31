@@ -1,0 +1,151 @@
+/*
+ * Modern Dark Theme for Event Management System
+ * Inspired by professional IDE themes for a clean, moderate look.
+ */
+
+/* --- ROOT & GENERAL STYLES --- */
+.root, .dialog-pane {
+    -fx-base: #3c3f41; /* Base color for controls */
+    -fx-background: #2b2b2b; /* Main background */
+    -fx-control-inner-background: #313335; /* Text fields, lists */
+    -fx-control-inner-background-alt: derive(-fx-control-inner-background, 25%);
+    -fx-accent: #3498db; /* Accent color for focus, selection */
+    -fx-focus-color: -fx-accent;
+    -fx-faint-focus-color: -fx-focus-color, -fx-box-border, -fx-control-inner-background, -fx-faint-focus-color;
+}
+
+/* --- TEXT & LABELS --- */
+.label, .text {
+    -fx-text-fill: #a9b7c6; /* Softer white for text */
+}
+
+.label:disabled {
+    -fx-opacity: 0.6;
+}
+
+/* --- HEADERS & TITLES --- */
+.dashboard-title, .content-title, .dialog-pane .header-panel .label {
+    -fx-text-fill: #e0e0e0; /* Brighter white for titles */
+}
+
+/* --- BUTTONS --- */
+.button {
+    -fx-background-color: #4e5254;
+    -fx-text-fill: #e0e0e0;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+    -fx-border-color: #5e6061;
+}
+
+.button:hover {
+    -fx-background-color: #5a5e60;
+}
+
+.button:pressed {
+    -fx-background-color: #434648;
+}
+
+/* --- TEXT FIELDS & COMBO BOXES --- */
+.text-field, .text-area, .combo-box, .date-picker {
+    -fx-background-color: -fx-control-inner-background;
+    -fx-text-fill: #a9b7c6;
+    -fx-prompt-text-fill: #6c7074;
+    -fx-border-color: #555;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+.text-field:focused, .text-area:focused, .combo-box:focused, .date-picker:focused {
+    -fx-border-color: -fx-accent;
+}
+
+/* --- TABLE VIEW --- */
+.table-view {
+    -fx-background-color: -fx-control-inner-background;
+    -fx-selection-bar-non-focused: #525659;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #3c3f41;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: #3c3f41;
+    -fx-border-color: #2b2b2b;
+    -fx-border-width: 0 1px 1px 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-cell {
+    -fx-border-color: transparent;
+    -fx-padding: 4 8;
+    -fx-text-fill: #a9b7c6;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: -fx-control-inner-background;
+}
+
+.table-row-cell:even {
+    -fx-background-color: derive(-fx-control-inner-background, 5%);
+}
+
+.table-row-cell:selected {
+    -fx-background-color: -fx-accent;
+    -fx-text-fill: white;
+}
+
+/* --- CALENDAR VIEW --- */
+.calendar-grid .vbox { /* Day cells */
+    -fx-background-color: #313335;
+    -fx-border-color: #45494a;
+    -fx-border-radius: 4;
+}
+
+.calendar-grid .vbox:hover {
+    -fx-background-color: #3c3f41;
+}
+
+/* Today's date highlight */
+.calendar-grid .vbox[style*="-fx-border-color: #3498db;"] {
+    -fx-background-color: #313335;
+    -fx-border-width: 2;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    -fx-background-color: #2c3e50;
+}
+
+.sidebar .label {
+    -fx-text-fill: white;
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #bdc3c7;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+}
+
+/* --- SPECIFIC UI COMPONENTS --- */
+.separator .line {
+    -fx-border-color: #45494a;
+    -fx-border-width: 1 0 0 0;
+}
+
+.hyperlink {
+    -fx-text-fill: #589df6;
+}
+
+.hyperlink:visited {
+    -fx-text-fill: #9876aa;
+}

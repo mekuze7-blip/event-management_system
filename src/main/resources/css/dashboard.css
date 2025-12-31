@@ -1,0 +1,87 @@
+/*
+ * CSS for the Smart Dashboard - Event Management System
+ */
+
+.dashboard-root {
+    -fx-background-color: #f4f6f9; /* Light grey background for the whole dashboard */
+}
+
+.dashboard-header {
+    -fx-background-color: #ffffff;
+    -fx-padding: 12px 20px;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.dashboard-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #343a40;
+}
+
+.user-info {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6c757d;
+}
+
+.dashboard-center {
+    -fx-padding: 25px;
+    -fx-spacing: 25px;
+}
+
+/* Analytics & Feature Cards */
+.feature-card, .analytics-card {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0, 0, 4);
+    -fx-alignment: center-left;
+}
+
+.feature-card:hover, .analytics-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 12, 0, 0, 5);
+    -fx-cursor: hand;
+}
+
+.card-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #495057;
+}
+
+.card-value {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #007bff;
+}
+
+.card-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6c757d;
+}
+
+/* Buttons */
+.primary-button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+.primary-button:hover {
+    -fx-background-color: #0056b3;
+}
+
+.status-bar {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10px 20px;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1px 0 0 0;
+}
+.status-bar-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6c757d;
+}

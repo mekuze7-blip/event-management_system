@@ -1,0 +1,70 @@
+?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.calendar.app.controllers.EventController" prefWidth="1200" prefHeight="800">
+    
+    <top>
+        <VBox spacing="10" style="-fx-background-color: #2c3e50; -fx-padding: 20;">
+            <Label text="📋 Event Manager" style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;"/>
+            
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <TextField fx:id="searchField" promptText="Search events..." prefWidth="300"/>
+                <Button text="Search" onAction="#handleSearch"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label text="Filter:" style="-fx-text-fill: white;"/>
+                <ChoiceBox fx:id="filterChoice" prefWidth="150" onAction="#handleFilter"/>
+                <Button text="Refresh" onAction="#handleRefresh"/>
+            </HBox>
+        </VBox>
+    </top>
+    
+    <center>
+        <VBox spacing="10" padding="20">
+            <!-- Action Buttons -->
+            <HBox spacing="10" style="-fx-padding: 0 0 10 0;">
+                <Button text="+ Create Event" onAction="#handleCreateEvent" 
+                        style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold;"/>
+                <Button text="✏️ Edit" onAction="#handleEditEvent" 
+                        style="-fx-background-color: #3498db; -fx-text-fill: white;"/>
+                <Button text="🗑️ Delete" onAction="#handleDeleteEvent" 
+                        style="-fx-background-color: #e74c3c; -fx-text-fill: white;"/>
+            </HBox>
+            
+            <!-- Events Table -->
+            <TableView fx:id="eventsTable" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="titleColumn" text="Title" prefWidth="200"/>
+                    <TableColumn fx:id="dateColumn" text="Date" prefWidth="120"/>
+                    <TableColumn fx:id="locationColumn" text="Location" prefWidth="150"/>
+                    <TableColumn text="Description" prefWidth="300">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="description"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Status" prefWidth="100">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="status"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+            
+            <!-- Stats -->
+            <HBox spacing="20" style="-fx-padding: 10; -fx-background-color: #f5f5f5; -fx-border-color: #ddd; -fx-border-width: 1;">
+                <Label text="Total Events: 0" fx:id="totalLabel" style="-fx-font-weight: bold;"/>
+                <Label text="Upcoming: 0" fx:id="upcomingLabel" style="-fx-font-weight: bold;"/>
+                <Label text="Completed: 0" fx:id="completedLabel" style="-fx-font-weight: bold;"/>
+            </HBox>
+        </VBox>
+    </center>
+    
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-background-color: #f5f5f5; -fx-padding: 10;" spacing="10">
+            <Button text="Calendar View" onAction="#handleCalendarView"/>
+            <Button text="Back to Dashboard" onAction="#handleBackToDashboard"/>
+            <Button text="Export Events" onAction="#handleExportEvents"/>
+        </HBox>
+    </bottom>
+</BorderPane>

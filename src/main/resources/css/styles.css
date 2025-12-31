@@ -1,0 +1,93 @@
+﻿/* Main Styles */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 14px;
+}
+
+.button {
+    -fx-background-radius: 4px;
+    -fx-padding: 8 20;
+    -fx-font-size: 14px;
+}
+
+.text-field, .text-area, .combo-box {
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-padding: 5;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f8f9fa;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #e3f2fd;
+}
+
+.calendar-day {
+    -fx-border-color: #ddd;
+    -fx-border-width: 0 1 1 0;
+    -fx-padding: 5;
+    -fx-background-color: white;
+}
+
+.calendar-day-header {
+    -fx-background-color: #f8f9fa;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.calendar-day-weekend {
+    -fx-background-color: #fff8e1;
+}
+
+.calendar-day-today {
+    -fx-background-color: #e8f5e9;
+    -fx-border-color: #4CAF50;
+    -fx-border-width: 2;
+}
+
+.calendar-day-event {
+    -fx-background-color: #e3f2fd;
+}
+
+.priority-high {
+    -fx-text-fill: #d32f2f;
+    -fx-font-weight: bold;
+}
+
+.priority-medium {
+    -fx-text-fill: #ff9800;
+}
+
+.priority-low {
+    -fx-text-fill: #4CAF50;
+}
+
+.category-meeting {
+    -fx-background-color: #bbdefb;
+    -fx-border-color: #2196f3;
+}
+
+.category-birthday {
+    -fx-background-color: #f8bbd0;
+    -fx-border-color: #e91e63;
+}
+
+.category-holiday {
+    -fx-background-color: #c8e6c9;
+    -fx-border-color: #4CAF50;
+}
+
+.category-reminder {
+    -fx-background-color: #fff9c4;
+    -fx-border-color: #ffeb3b;
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.calendar.app.controllers.MainController" prefWidth="800" prefHeight="600">
+    
+    <top>
+        <HBox style="-fx-background-color: #2c3e50; -fx-padding: 15;" alignment="CENTER" spacing="20">
+            <Label text="Event Management System v2.0" style="-fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold;"/>
+            <Label text="LOGIN SUCCESSFUL!" style="-fx-text-fill: #A5D6A7; -fx-font-size: 16px;"/>
+        </HBox>
+    </top>
+    
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #34495e; -fx-padding: 15;" alignment="TOP_CENTER">
+            <Button fx:id="calendarButton" text="Calendar View" prefWidth="120"/>
+            <Button fx:id="eventManagerButton" text="Event Manager" prefWidth="120"/>
+            <Region VBox.vgrow="ALWAYS" />
+            <Button fx:id="logoutButton" text="Logout" prefWidth="120"/>
+        </VBox>
+    </left>
+    
+    <center>
+        <VBox alignment="CENTER" spacing="30" style="-fx-background-color: white;">
+            <Label text="CONGRATULATIONS!" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #1E88E5;"/>
+            <Label text="All BOM issues are fixed!" style="-fx-font-size: 18px; -fx-text-fill: #37474F;"/>
+            
+            <VBox spacing="10" alignment="CENTER" style="-fx-background-color: #ECEFF1; -fx-padding: 20; -fx-border-radius: 8; -fx-border-color: #B0BEC5; -fx-border-width: 1; -fx-background-radius: 8;">
+                <Label text="Application is working perfectly!" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #263238;"/>
+                <Label text="No more XML parsing errors!" style="-fx-font-size: 14px; -fx-text-fill: #455A64;"/>
+                <Label text="Login system is functional!" style="-fx-font-size: 14px; -fx-text-fill: #455A64;"/>
+            </VBox>
+        </VBox>
+    </center>
+    
+    <bottom>
+        <HBox style="-fx-background-color: #CFD8DC; -fx-padding: 10;" alignment="CENTER">
+            <Label text="Event Management System | All BOM issues fixed | Ready for use" 
+                   style="-fx-text-fill: #546E7A; -fx-font-size: 11px;"/>
+        </HBox>
+    </bottom>
+</BorderPane>

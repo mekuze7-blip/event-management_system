@@ -1,0 +1,25 @@
+# Maven
+target/
+*.log
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# OS
+.DS_Store
+Thumbs.db
+
+# User specific settings
+ems_settings.properties
+
+# Compiled classes
+*.class
+
+# Package Files
+*.jar
+*.war
